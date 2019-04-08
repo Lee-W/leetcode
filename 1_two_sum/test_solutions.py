@@ -3,8 +3,6 @@ import pytest
 from solutions import Solution, Solution2
 
 
-
-
 @pytest.mark.parametrize(
     "test_input,expected",
     [
@@ -24,5 +22,3 @@ def test_solution(test_input, expected):
 
     solution = Solution2()
     assert solution.twoSum(*test_input) == expected
-
-
