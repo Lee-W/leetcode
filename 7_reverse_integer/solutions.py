@@ -1,13 +1,10 @@
 class Solution:
     def reverse(self, x: int) -> int:
-        is_negative = x < 0
-        positive_x_str = str(abs(x))
-
-        if is_negative:
-            result = -int(positive_x_str[::-1])
+        if x < 0:
+            x = -int(str(x)[:0:-1])
         else:
-            result = int(positive_x_str[::-1])
+            x = int(str(x)[::-1])
 
-        if 2**31 > result > -2**31 -1:
-            return result
+        if 2**31 > x > -2**31 -1:
+            return x
         return 0
