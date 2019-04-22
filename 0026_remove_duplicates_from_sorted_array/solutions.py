@@ -10,15 +10,9 @@ class Solution:
         nums_len = len(nums)
         while i != nums_len:
             if nums[i] == nums[i-1]:
-                nums.remove(nums[i])
+                nums.pop(i)
                 nums_len = len(nums)
             else:
                 i = i + 1
 
         return len(nums)
-
-
-nums = [1, 1, 2, 2, 3, 3, 3]
-solution = Solution()
-print(solution.removeDuplicates(nums))
-print(nums)
