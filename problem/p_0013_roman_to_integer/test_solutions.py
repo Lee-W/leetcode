@@ -13,7 +13,7 @@ from .solutions import Solution
         ("MCMXCIV", 1994),
         ("I", 1),
         ("MMMCMXCIX", 3999),
-    )
+    ),
 )
 def test_solutions(test_input, expected):
     solution = Solution()

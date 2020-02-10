@@ -34,27 +34,12 @@ def assert_node_value_equal(node_1, node_2):
 @pytest.mark.parametrize(
     "test_node1_val, test_node2_val, expected_val",
     [
-        (
-            (1, 2, 4), (1, 3, 4),
-            (1, 1, 2, 3, 4, 4)
-        ),
-        (
-            None, None,
-            None
-        ),
-        (
-            (1, ), None,
-            (1, )
-        ),
-        (
-            None, (1, ),
-            (1, )
-        ),
-        (
-            (1,), (1, ),
-            (1, 1)
-        )
-    ]
+        ((1, 2, 4), (1, 3, 4), (1, 1, 2, 3, 4, 4)),
+        (None, None, None),
+        ((1,), None, (1,)),
+        (None, (1,), (1,)),
+        ((1,), (1,), (1, 1)),
+    ],
 )
 def test_solution(test_node1_val, test_node2_val, expected_val):
     test_node1 = create_node(test_node1_val)

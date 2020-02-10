@@ -15,8 +15,8 @@ from .solutions import Solution, Solution2
         ("(((", False),
         ("(", False),
         ("]", False),
-        ("{[}]", False)
-    ]
+        ("{[}]", False),
+    ],
 )
 def test_solutions(test_input, expected):
     solution = Solution()

@@ -13,8 +13,8 @@ from .solutions import Solution, Solution2
         ("mississippi", "issip", 4),
         ("a", "a", 0),
         ("aa", "aa", 0),
-        ("mississippi", "pi", 9)
-    )
+        ("mississippi", "pi", 9),
+    ),
 )
 def test_solution(test_haystack, test_needle, expected):
     solution = Solution()

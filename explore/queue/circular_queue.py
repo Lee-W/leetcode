@@ -56,7 +56,6 @@ class MyCircularQueue:
             return -1
         return self._data[self._rear]
 
-
     def isEmpty(self) -> bool:
         """
         Checks whether the circular queue is empty or not.
@@ -69,6 +68,8 @@ class MyCircularQueue:
         """
         Checks whether the circular queue is full or not.
         """
-        if self._rear + 1 == self._front or (self._front == 0 and self._rear == self._size - 1):
+        if self._rear + 1 == self._front or (
+            self._front == 0 and self._rear == self._size - 1
+        ):
             return True
         return False

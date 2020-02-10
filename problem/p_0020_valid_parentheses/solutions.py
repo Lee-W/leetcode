@@ -23,11 +23,7 @@ class Solution:
 
 
 class Solution2:
-    BRACKET_MAPPING = {
-        "{": "}",
-        "(": ")",
-        "[": "]"
-    }
+    BRACKET_MAPPING = {"{": "}", "(": ")", "[": "]"}
 
     def isValid(self, s: str) -> bool:
         if not s:

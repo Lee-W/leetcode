@@ -14,7 +14,7 @@ class Solution2:
 
         for i, c in enumerate(haystack):
             if c == needle[0] and (h_len - i >= n_len):
-                if haystack[i:i+n_len] == needle:
+                if haystack[i : i + n_len] == needle:
                     return i
 
         return -1

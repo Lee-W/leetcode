@@ -3,10 +3,7 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        remain_values = [
-            target - num
-            for num in nums
-        ]
+        remain_values = [target - num for num in nums]
 
         for num_index, num in enumerate(nums):
             if num in remain_values:

@@ -7,8 +7,8 @@ class Solution:
             return True
 
         x = str(x)
-        middle = int(len(x)/2)
-        for i, j in zip(x[:middle+1:1], x[:middle-1:-1]):
+        middle = int(len(x) / 2)
+        for i, j in zip(x[: middle + 1 : 1], x[: middle - 1 : -1]):
             if i != j:
                 return False
         return True
