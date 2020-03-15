@@ -2,7 +2,7 @@ from typing import List
 
 import pytest
 
-from .solutions import Solution, ListNode
+from .solutions import ListNode, Solution
 
 
 def create_node(reverse_num_list: List[int]):

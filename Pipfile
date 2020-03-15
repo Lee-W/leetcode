@@ -4,10 +4,31 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+# task management
+invoke = "*"
+# test
+pytest = "*"
+pytest-cov = "*"
+pytest-mock = "*"
+pytest-xdist = "*"
+hypothesis = "*"
+# style
+black = "*"
+isort = "*"
+flake8 = "*"
+mypy = "*"
 pylint = "*"
+# security
+bandit = "*"
+# git
+commitizen = "*"
+coverage = {extras = ["toml"],version = "*"}
+pre-commit = "*"
 
 [packages]
-pytest = "*"
+
+[pipenv]
+allow_prereleases = true
 
 [requires]
 python_version = "3.7"

@@ -1,0 +1,83 @@
+[tool.commitizen]
+name = "cz_customize"
+version = "0.0.1"
+tag_format = "$version"
+
+    [tool.commitizen.customize]
+    message_template = "{{change_type}}{% if scope %}({{scope}}){% endif %}: {{message}}"
+    example = "problem(66): plus one"
+    schema = "<type>: <body>"
+
+    [[tool.commitizen.customize.questions]]
+    type = "list"
+    name = "change_type"
+    message = "Select the type of change you are committing"
+
+        [[tool.commitizen.customize.questions.choices]]
+            value = "problem"
+            name = "problem: New roblem solved"
+
+        [[tool.commitizen.customize.questions.choices]]
+            value = "testcase"
+            name = "testcase: New testcase added"
+
+        [[tool.commitizen.customize.questions.choices]]
+            value = "perf"
+            name = "perf: A code change that improves performance"
+
+        [[tool.commitizen.customize.questions.choices]]
+            value = "fix"
+            name = "fix: A bug fix"
+
+        [[tool.commitizen.customize.questions.choices]]
+            value = "docs"
+            name = "docs: Documentation only changes"
+
+        [[tool.commitizen.customize.questions.choices]]
+            value = "style"
+            name = "style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)"
+
+        [[tool.commitizen.customize.questions.choices]]
+            value = "refactor"
+            name = "refactor: A code change that neither fixes a bug nor adds a feature"
+
+        [[tool.commitizen.customize.questions.choices]]
+            value = "chore"
+            name = "chore: Other changes that don't modify src or test files"
+
+    [[tool.commitizen.customize.questions]]
+    type = "input"
+    name = "scope"
+    message = "Scope. Could be anything specifying place of the commit change\n"
+
+    [[tool.commitizen.customize.questions]]
+    type = "input"
+    name = "message"
+    message = "Subject. Concise description of the changes. Imperative, lower case and no final dot:\n"
+
+[tool.coverage]
+    [tool.coverage.report]
+    show_missing = true
+    exclude_lines = [
+        # Have to re-enable the standard pragma
+        'pragma: no cover',
+
+        # Don't complain about missing debug-only code:
+        'def __repr__',
+        'if self\.debug',
+
+        # Don't complain if tests don't hit defensive assertion code:
+        'raise AssertionError',
+        'raise NotImplementedError',
+
+        # Don't complain if non-runnable code isn't run:
+        'if 0:',
+        'if __name__ == .__main__.:'
+    ]
+    omit = [
+        'env/*',
+        'venv/*',
+        '*/virtualenv/*',
+        '*/virtualenvs/*',
+        '*/tests/*'
+    ]
