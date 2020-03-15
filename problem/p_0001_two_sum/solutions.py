@@ -10,7 +10,8 @@ class Solution:
                 remain_index = remain_values.index(num)
 
                 if num_index != remain_index:
-                    return [num_index, remain_index]
+                    break
+        return [num_index, remain_index]
 
 
 class Solution2:
@@ -22,3 +23,4 @@ class Solution2:
                 remain_index = nums.index(remain)
                 if remain_index != num_index:
                     return [num_index, remain_index]
+        return [num_index, remain_index]

@@ -1,3 +1,6 @@
+from typing import Optional
+
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, x):
@@ -9,7 +12,7 @@ class ListNode:
 
 
 class Solution:
-    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> Optional[ListNode]:
         if l1 and l2:
             if l1.val <= l2.val:
                 first_node = ListNode(l1.val)
@@ -46,6 +49,4 @@ class Solution:
 
         if not l1:
             return l2
-
-        if not l2:
-            return l1
+        return l1
