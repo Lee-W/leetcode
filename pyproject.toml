@@ -81,3 +81,39 @@ tag_format = "$version"
         '*/virtualenvs/*',
         '*/tests/*'
     ]
+
+
+[tool.pylint]
+    [tool.pylint.messages_control]
+    disable = [
+        "bad-continuation",
+        "missing-function-docstring",
+        "missing-module-docstring",
+        "invalid-name"
+    ]
+
+    [tool.pylint.format]
+    max-line-length = 88
+
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+
+[tool.isort]
+profile = "black"
