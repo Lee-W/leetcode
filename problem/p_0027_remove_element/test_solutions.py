@@ -1,6 +1,6 @@
 import pytest
 
-from .solutions import Solution, Solution2
+from .solutions import Solution, Solution2, Solution3
 
 
 @pytest.mark.parametrize(
@@ -19,4 +19,8 @@ def test_solutions(test_nums, test_val, expected_length, exptected_nums):
 
     solution2 = Solution2()
     assert solution2.removeElement(test_nums, test_val) == expected_length
+    assert test_nums == exptected_nums
+
+    solution3 = Solution3()
+    assert solution3.removeElement(test_nums, test_val) == expected_length
     assert test_nums == exptected_nums
