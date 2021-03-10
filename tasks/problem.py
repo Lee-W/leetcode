@@ -1,8 +1,5 @@
 from invoke import task
 
-from tasks.common import PIPENV_PREFIX
-
-
 @task
 def new(ctx):
     """Initialize new problem"""
@@ -15,3 +12,9 @@ def new(ctx):
 
     for default_file in default_files:
         ctx.run(f"touch problem/{directory_name}/{default_file}", pty=True)
+
+@task
+def count(ctx):
+    """Count solved problems"""
+    result = ctx.run(f"ls -l problem | grep p_ | wc -l", hide="both").stdout.strip()
+    print(f"{result} problems solved")
