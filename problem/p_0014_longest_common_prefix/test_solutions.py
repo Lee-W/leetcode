@@ -1,6 +1,6 @@
 import pytest
 
-from .solutions import Solution
+from .solutions import Solution, Solution2
 
 
 @pytest.mark.parametrize(
@@ -9,4 +9,7 @@ from .solutions import Solution
 )
 def test_solutions(test_input, expected):
     solution = Solution()
+    assert solution.longestCommonPrefix(test_input) == expected
+
+    solution = Solution2()
     assert solution.longestCommonPrefix(test_input) == expected
