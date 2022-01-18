@@ -1,6 +1,6 @@
 import pytest
 
-from .solutions import Solution, Solution2
+from .solutions import Solution
 
 
 @pytest.mark.parametrize(
@@ -17,7 +17,4 @@ from .solutions import Solution, Solution2
 )
 def test_solutions(value, expected):
     solution = Solution()
-    assert solution.dominantIndex(value) == expected
-
-    solution = Solution2()
     assert solution.dominantIndex(value) == expected
