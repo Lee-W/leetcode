@@ -24,7 +24,7 @@ def new(ctx):
 def count(ctx):
     """Count solved problems"""
     result = ctx.run(
-        f"git ls-tree master --name-only problem/ | grep p_ | wc", hide="both"
+        f"git ls-tree master --name-only problem/ | grep p_ | wc -l", hide="both"
     ).stdout.strip()
     print(f"{result} problems solved")
 

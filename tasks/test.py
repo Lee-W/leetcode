@@ -6,4 +6,4 @@ from tasks.common import PIPENV_PREFIX
 @task(default=True)
 def run(ctx):
     """Run test cases"""
-    ctx.run(f"{PIPENV_PREFIX} pytest", pty=True)
+    ctx.run(f"{PIPENV_PREFIX} pytest problem explore", pty=True)
