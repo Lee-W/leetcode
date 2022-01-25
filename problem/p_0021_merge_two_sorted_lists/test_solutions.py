@@ -2,7 +2,7 @@ from typing import List
 
 import pytest
 
-from .solutions import ListNode, Solution
+from .solutions import ListNode, Solution, Solution2
 
 
 def create_node(num_list: List[int]):
@@ -41,12 +41,13 @@ def assert_node_value_equal(node_1, node_2):
         ((1,), (1,), (1, 1)),
     ],
 )
-def test_solution(test_node1_val, test_node2_val, expected_val):
+@pytest.mark.parametrize("solution_cls", (Solution, Solution2))
+def test_solution(test_node1_val, test_node2_val, expected_val, solution_cls):
     test_node1 = create_node(test_node1_val)
     test_node2 = create_node(test_node2_val)
     expected_node = create_node(expected_val)
 
-    solution = Solution()
+    solution = solution_cls()
     result_node = solution.mergeTwoLists(test_node1, test_node2)
 
     assert assert_node_value_equal(result_node, expected_node)
