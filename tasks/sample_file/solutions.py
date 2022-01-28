@@ -1,7 +1,7 @@
 class Solution:
     """
-    Runtime:  ms ( %)
-    Memory Usage:  MB ( %)
+    Runtime: ms ( %)
+    Memory Usage: MB ( %)
     """
     def func(self):
         ...
