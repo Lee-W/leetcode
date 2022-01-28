@@ -46,3 +46,26 @@ class Solution2:
             return False
 
         return True
+
+
+class Solution3:
+    """
+    Runtime: 24 ms (97.37 %)
+    Memory Usage: 13.9 MB (99.8 %)
+    """
+
+    def isValid(self, s: str) -> bool:
+        parenthese_mappging = {"(": ")", "{": "}", "[": "]"}
+
+        stack = []
+
+        for c in s:
+            if c in parenthese_mappging:
+                stack.append(c)
+            else:
+                if stack and parenthese_mappging[stack[-1]] == c:
+                    stack.pop()
+                else:
+                    return False
+
+        return not bool(stack)
