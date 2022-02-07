@@ -1,6 +1,6 @@
 import pytest
 
-from .solutions import Solution, ListNode
+from .solutions import ListNode, Solution
 
 node_5 = ListNode(5)
 node_4 = ListNode(4, node_5)

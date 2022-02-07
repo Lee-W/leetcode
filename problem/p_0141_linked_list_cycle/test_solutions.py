@@ -1,7 +1,6 @@
 import pytest
 
-from .solutions import Solution, ListNode
-
+from .solutions import ListNode, Solution
 
 node_1_1 = ListNode(3)
 node_1_2 = ListNode(2)

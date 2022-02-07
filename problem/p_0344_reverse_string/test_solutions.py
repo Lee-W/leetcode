@@ -1,10 +1,10 @@
-import pytest
 import string
+from copy import deepcopy
 
+import pytest
 from hypothesis import given
 from hypothesis.strategies import text
 
-from copy import deepcopy
 from .solutions import Solution, Solution2
 
 
