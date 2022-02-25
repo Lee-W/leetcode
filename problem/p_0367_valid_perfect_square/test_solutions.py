@@ -1,9 +1,7 @@
-import pytest
-
-from .solutions import Solution
-
 from hypothesis import given
 from hypothesis.strategies import integers
+
+from .solutions import Solution
 
 
 # @pytest.mark.parametrize("solution_cls", [Solution])

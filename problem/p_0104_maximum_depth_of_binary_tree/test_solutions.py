@@ -2,7 +2,6 @@ import pytest
 
 from .solutions import Solution, TreeNode
 
-
 tree_node_7 = TreeNode(7, None, None)
 tree_node_15 = TreeNode(15, None, None)
 tree_node_20 = TreeNode(20, tree_node_15, tree_node_7)
