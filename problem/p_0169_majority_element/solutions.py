@@ -1,4 +1,5 @@
 from typing import List
+from collections import Counter
 
 
 class Solution:
@@ -23,3 +24,13 @@ class Solution:
                 majority_element = num
 
         return majority_element
+
+
+class Solution2:
+    """
+    Runtime: 255 ms (67.59 %)
+    Memory Usage: 15.6 MB (35.03 %)
+    """
+
+    def majorityElement(self, nums: List[int]) -> int:
+        return Counter(nums).most_common()[0][0]
